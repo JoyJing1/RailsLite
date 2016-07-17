@@ -26,9 +26,11 @@ class ControllerBase
   # Set the response status code and header
   def redirect_to(url)
     raise "Double render error" if already_built_response?
+
     @res['location'] = url
     @res.status = 302
     @already_built_response = true
+
     session.store_session(@res)
     flash.store_flash(@res)
     nil
@@ -39,9 +41,11 @@ class ControllerBase
   # Raise an error if the developer tries to double render.
   def render_content(content, content_type)
     raise "Double render error" if already_built_response?
+
     @res['Content-Type'] = content_type
     @res.write(content)
     @already_built_response = true
+
     session.store_session(@res)
     flash.store_flash(@res)
     nil

@@ -43,7 +43,7 @@ describe ControllerBase do
         users_controller2.render_content "sombody", "text/html"
         expect do
           users_controller2.render_content "sombody", "text/html"
-        end.to raise_error
+        end.to raise_error(RuntimeError)
       end
     end
   end
@@ -77,7 +77,7 @@ describe ControllerBase do
         users_controller2.redirect_to("http://google.com")
         expect do
           users_controller2.redirect_to("http://google.com")
-        end.to raise_error
+        end.to raise_error(RuntimeError)
       end
     end
   end

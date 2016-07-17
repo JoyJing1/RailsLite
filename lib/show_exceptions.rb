@@ -22,7 +22,6 @@ class ShowExceptions
     template_fname = File.join(dir_path, "templates", "rescue.html.erb")
     template = File.read(template_fname)
     body = ERB.new(template).result(binding)
-    #debugger
 
     ["500", {'Content-type' => 'text/html'}, body]
   end

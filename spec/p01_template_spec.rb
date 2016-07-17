@@ -42,7 +42,7 @@ describe ControllerBase do
         cats_controller2.render(:index)
         expect do
           cats_controller2.render(:index)
-        end.to raise_error
+        end.to raise_error(RuntimeError)
       end
     end
   end
