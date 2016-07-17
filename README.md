@@ -2,7 +2,7 @@
 
 Rails Lite is an academic exercise in implementing the main functionality of Rails and its ability to leverage convention over configuration.
 
-The purpose was to deeply understand how Rails works, with a focus on Model-View-Controller (MVC) architecture and meta-programming. It is written in pure Ruby.
+The purpose was to deeply understand how Rails works, with a focus on Model-View-Controller (MVC) architecture and metaprogramming. It is written in pure Ruby.
 
 ## Demo
 
@@ -132,3 +132,6 @@ class ControllerBase
   end
 end
 ```
+
+Developed by [Joy Jing][joy-jing]
+[joy-jing]: https://joyjing1.github.io/
